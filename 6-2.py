@@ -14,15 +14,8 @@ def find_roots(a, b, c):
 
 lines = example.splitlines()
 
-times = [int(x) for x in lines[0].split(":")[1].strip().split(" ") if x]
-distances = [int(x) for x in lines[1].split(":")[1].strip().split(" ") if x]
+time = [int(x) for x in lines[0].split(":")[1].strip().split(" ") if x][0]
+record = [int(x) for x in lines[1].split(":")[1].strip().split(" ") if x][0]
 
-total = 1
-
-for i in range(len(times)):
-    count = 0
-    time = times[i]
-    record = distances[i]
-
-    a, b = find_roots(1, time, record)
-    print(abs(math.floor(a) - math.floor(b)))
+a, b = find_roots(1, time, record)
+print(abs(math.floor(a) - math.floor(b)))
