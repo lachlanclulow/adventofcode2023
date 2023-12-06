@@ -10,7 +10,7 @@ def find_roots(a, b, c):
     dis_form = b * b - 4 * a * c
     sqrt_val = math.sqrt(abs(dis_form)) 
 
-    return sorted(tuple([(-b + sqrt_val) / (2 * a), (-b - sqrt_val) / (2 * a)]))
+    return tuple([(-b + sqrt_val) / (2 * a), (-b - sqrt_val ) / (2 * a)])
 
 lines = example.splitlines()
 
